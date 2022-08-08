@@ -22,14 +22,18 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: ["style-loader", 'css-loader', 'sass-loader']
-            }
+            },
+            {
+                test: /\.html$/i,
+                loader: "html-loader",
+             },
         ]
     }, 
-    plugins: [
-        new HTMLWebpackPlugin({
-            title: "Webpack",
-            filename: 'index.html',
-            template: "src/template.html"
-        })
-    ]
+    // plugins: [
+    //     new HTMLWebpackPlugin({
+    //         title: "Webpack",
+    //         filename: 'index.html',
+    //         template: "src/template.html"
+    //     })
+    // ]
 }
